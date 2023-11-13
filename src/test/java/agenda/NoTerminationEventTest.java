@@ -35,7 +35,7 @@ public class NoTerminationEventTest {
     public void eventOccurs10DayAfter() {
         assertTrue(neverEnding.isInDay(nov_1_2020.plus(10, ChronoUnit.DAYS)),  "Cet événement se produit tous les jours");
     }
-    
+
     @Test
     public void eventIsNotInExceptionDays() {
         neverEnding.addException(nov_1_2020.plus(2, ChronoUnit.DAYS)); // ne se produit pas à J+2
@@ -45,5 +45,5 @@ public class NoTerminationEventTest {
         assertTrue(neverEnding.isInDay(nov_1_2020.plus(3, ChronoUnit.DAYS)),  "Cet événement se produit tous les jours");
         assertFalse(neverEnding.isInDay(nov_1_2020.plus(4, ChronoUnit.DAYS)), "Cet événement ne se produit pas à J+4");
     }
-    
+
 }

@@ -27,7 +27,7 @@ public class FixedTerminationEventTest {
 
     // A Weekly Repetitive event ending after a give number of occurrrences
     FixedTerminationEvent fixedRepetitions = new FixedTerminationEvent("Fixed termination weekly", nov_1__2020_22_30, min_120, ChronoUnit.WEEKS, 10);
-    
+
     @Test
     public void canCalculateNumberOfOccurrencesFromTerminationDate() {
         assertEquals(10, fixedTermination.getNumberOfOccurrences(), "Cet événement doits se répéter 10 fois");
@@ -38,7 +38,7 @@ public class FixedTerminationEventTest {
         LocalDate termination = LocalDate.of(2021,1, 3);
         assertEquals(termination, fixedRepetitions.getTerminationDate(), "Cet événement doits se terminer le 3 janvier");
     }
-    
+
     @Test
     public void eventIsInItsStartDay() {
         assertTrue(fixedTermination.isInDay(nov_1_2020), "Un événement a lieu dans son jour de début");
